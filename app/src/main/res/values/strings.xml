@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">detski_mir</string>
+    <string name="text_view_step">Вход</string>
+    <string name="text_for_title">text for title</string>
+</resources>
