@@ -1,12 +1,33 @@
 package com.example.detski_mir
 
-import androidx.appcompat.app.AppCompatActivity
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.ThemedSpinnerAdapter.Helper
+import java.io.File
+import java.sql.SQLException
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    fun aut (view: View){
+        val dbHelper = MyDatabaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM detsi_mir.auth", null)
+        if (cursor.moveToFirst()) {
+            do {
+                // Обработка данных
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        val login = findViewById<EditText>(R.id.login_edit_text)
+        val password = findViewById<EditText>(R.id.password_edit_text)
     }
     class auth {
         var login: String? = null
