@@ -17,15 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun aut (view: View){
-        val dbHelper = MyDatabaseHelper(this)
-        val db = dbHelper.readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM detsi_mir.auth", null)
-        if (cursor.moveToFirst()) {
-            do {
-                // Обработка данных
-            } while (cursor.moveToNext())
-        }
-        cursor.close()
+
         val login = findViewById<EditText>(R.id.login_edit_text)
         val password = findViewById<EditText>(R.id.password_edit_text)
     }
