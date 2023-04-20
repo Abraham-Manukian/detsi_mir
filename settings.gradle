@@ -15,5 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "detski_mir"
 include ':app'
 ext {
-    roomVersion = '2.1.0-alpha03'
+    roomVersion = '2.5.1'
 }

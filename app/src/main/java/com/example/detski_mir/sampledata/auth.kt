@@ -6,8 +6,12 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "auth")
 data class auth(
-    @PrimaryKey val login: String,
-    @ColumnInfo(name = "level")
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null,
+    @ColumnInfo(name = "login")
+    var login: String,
+    @ColumnInfo(name = "lev")
+    var lev: String,
+    @ColumnInfo(name = "password")
     var password: String,
-    var lev: String
 )

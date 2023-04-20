@@ -1,4 +1,19 @@
 package com.example.detski_mir.data_base
 
-interface dao_interfaces_level {
+import androidx.room.*
+import com.example.detski_mir.sampledata.level
+
+@Dao
+interface levelDao {
+    @Query("SELECT * FROM level")
+    fun getAllLevels(): List<level>
+
+    @Query("SELECT * FROM level WHERE id = :levelId")
+    fun getLevelById(levelId: Int): level?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertLevel(level: level)
+
+    @Delete
+    fun deleteLevel(level: level)
 }

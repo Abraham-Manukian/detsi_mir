@@ -1,5 +1,3 @@
-package com.example.detski_mir.sampledata
-
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
