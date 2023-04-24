@@ -8,94 +8,46 @@
     android:background="@color/background"
     tools:ignore="ExtraText">
 
-    <!-- detski_mir_logo 1 -->
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/detski_mir_"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/detski_mir_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="15dp"
-        tools:ignore="MissingConstraints" />
-
-    <!-- text_view_authorization -->
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/text_view_authorization"
-        android:textAppearance="@style/text_view_authorization"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detski_mir_"
-        android:layout_marginTop="120dp"
-        tools:ignore="DuplicateIds" />
-
-    <!-- LinearLayout for edit texts -->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_id"
-        tools:ignore="MissingConstraints">
-        <!-- -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField1"
-            style="@style/MyTextInputLayout"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="@string/login">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/login_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField2"
-            style="@style/MyTextInputLayout"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="35dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="@string/password">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-
     <Button
-        android:id="@+id/Button"
-        style="@style/contained_button"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/shape_button"
-        android:onClick="aut"
-        android:text="@string/come_in"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,8 @@
 package com.example.detski_mir
 
-class UserViewModel {
+import Dao
+import androidx.lifecycle.ViewModel
+
+class UserViewModel(private val authDao: Dao) : ViewModel() {
+
 }

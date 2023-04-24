@@ -1,17 +1,14 @@
 
 import androidx.room.*
-import com.example.detski_mir.sampledata.auth
+import androidx.room.Dao
+import com.example.detski_mir.data_base.Auth
+import kotlinx.coroutines.flow.Flow
+
 
 @Dao
-interface authDao {
-
-    @Query("SELECT * FROM auth WHERE login = :login")
-    fun getByLogin(login: String): auth?
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertOrUpdate(entity: auth)
-
-    @Delete
-    fun delete(entity: auth)
-
+interface Dao {
+    @Insert
+    fun insertauth(auth: Auth)
+    @Query("SELECT * FROM auths")
+    fun getAll(): Flow<List<Auth>>
 }

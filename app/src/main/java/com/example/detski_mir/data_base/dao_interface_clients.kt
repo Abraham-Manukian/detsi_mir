@@ -1,7 +1,7 @@
 
-package com.example.detski_mir.sampledata
 
 import androidx.room.*
+import androidx.room.Dao
 import clients
 @Dao
 interface clientsDao {

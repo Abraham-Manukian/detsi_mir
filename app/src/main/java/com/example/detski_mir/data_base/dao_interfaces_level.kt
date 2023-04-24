@@ -1,7 +1,6 @@
 package com.example.detski_mir.data_base
 
 import androidx.room.*
-import com.example.detski_mir.sampledata.level
 
 @Dao
 interface levelDao {

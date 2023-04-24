@@ -1,6 +1,7 @@
 
 import androidx.room.*
-import com.example.detski_mir.sampledata.goods
+import com.example.detski_mir.data_base.goods
+import androidx.room.Dao
 
 @Dao
 interface goodsDao {

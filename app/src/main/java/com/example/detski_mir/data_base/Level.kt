@@ -1,4 +1,4 @@
-package com.example.detski_mir.sampledata
+package com.example.detski_mir.data_base
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
